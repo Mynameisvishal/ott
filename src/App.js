@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Row from "./Row";
-import requests from "./request";
+import {requests,movies} from "./request";
 import Nav from "./Nav";
 import Banner from './Banner';
 import Login from "./authenticate/Login"
@@ -53,15 +53,20 @@ export class App extends Component {
   }
  
   render() {
-    const logedin = localStorage.getItem('logedin');
-    
+    const logedin = false;
+    const genre = ["anime", "thriller"]
+    for (genre in a) {
+      label a print
+      movies filter with a
+      print hor
+    }
     return (
      
       <React.Fragment>
       {logedin ?
           <Login/> :
     <div className="app"> 
-      
+       
       <Nav />
       <Banner />
       <Row title="MOVIE BUZZ ORIGINALS" fetchURL={requests.fetchMovieBuzzOriginals} Largeone />
