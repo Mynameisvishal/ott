@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Row from "./Row";
 import {requests,movies} from "./request";
-import Nav from "./Nav";
-import Banner from './Banner';
 import Login from "./authenticate/Login"
 import "./App.css";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {Home} from "./Home";
 
 // function App() {
   
@@ -44,7 +44,7 @@ import "./App.css";
 
 
 
-export class App extends Component {
+class App extends Component {
   
 
   componentWillMount() {
@@ -58,28 +58,22 @@ export class App extends Component {
     for (genre in a) {
       label a print
       movies filter with a
-      print hor
+      princonst logedin = false;
+      const genre = ["anime", "thriller"]
+      for (genre in a) {
+        label a print
+        movies filter with a
+          print t hor
     }
     return (
-     
       <React.Fragment>
-      {logedin ?
-          <Login/> :
-    <div className="app"> 
-       
-      <Nav />
-      <Banner />
-      <Row title="MOVIE BUZZ ORIGINALS" fetchURL={requests.fetchMovieBuzzOriginals} Largeone />
-      {/* <Row title="Recent Added" fetchURL={}/> */}
-      <Row title="Trending Now" fetchURL={requests.fetchTrending}/>
-      <Row title="Indian Movies" fetchURL={requests.fetchIndianMovies} />
-      <Row title="Top Rated" fetchURL={requests.fetchTopRated}/>
-      <Row title="Action Movies" fetchURL={requests.fetchActionMovies}/>
-      <Row title="Horrer Movies" fetchURL={requests.fetchHorrorMovies}/>
-      <Row title="Comedy Movies" fetchURL={requests.fetchComedyMovies}/>
-
-    </div>
-    }
+        <Router>
+          <Switch>
+            <Route path="/" exact={true} component={Home}/>
+            <Route path="/login" exact={true} component={Login}/>
+            <Route path="/admin" exact={true} component={Admin}/>
+          </Switch>
+        </Router>
     </React.Fragment>
     )
   }

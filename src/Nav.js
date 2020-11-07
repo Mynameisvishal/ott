@@ -30,6 +30,7 @@ function Nav() {
     }
 
     return (
+
         <div className={`navbar ${show && "nav__black"}`}>
             <h1 className={`nav__logo ${show && "nav__shadow"}`}> MOVIE BUZZ</h1>
             <div>
@@ -56,7 +57,7 @@ function Nav() {
                 {/* {window.matchMedia("(max-width: 700px)") ? {} : <Input icon='search' className={`nav__search ${show && "nav__visible"}`} placeholder='Search...' /> }
                 } */}
                 <button className={`navbar__button ${show && "nav__outline"}`} onClick={logout}>
-                    Log out
+                    {JSON.parse(localStorage.getItem('logedin')) ? "Log out" : "Login"}
                 </button>
             </div>
         </div>

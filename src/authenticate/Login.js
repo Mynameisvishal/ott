@@ -2,23 +2,39 @@ import React, { Component } from 'react';
 import Nav from '../Nav';
 import { Segment, Form, Button, Input } from "semantic-ui-react";
 import "./Login.css";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 
 
-export class Login extends Component {
+class Login extends Component {
     constructor(props) {
-        super(props);
-        this.onSubmit = this.onSubmit.bind(this);
-
+        super();
+        this.state = {
+            email: "",
+            password: "",
+            adminMail: "",
+            adminPassword: ""
+        }
     }
-    
     onSubmit = () => {
-        // console.log('clicked');
         localStorage.setItem('logedin', true);  
-        console.log(localStorage);
+        console.log(localStorage.getItem('logedin'));
+        this.props.history.push('/')
     }
+    componentWillMount() {
+        // const history =
+        const logedin = JSON.parse(localStorage.getItem('logedin'));
+        if(logedin){
+            this.props.history.push('/');
+        }
+    }
+    handleChange = (e) => {
+        this.setState({[e.target.name]: e.target.value});
+
+        console.log(this.state);
+    }
+
     render() {
-    
         return (
             <div>
             <Nav />
@@ -28,8 +44,8 @@ export class Login extends Component {
                     <div className="login__sub">
                         <h1 className="login__header"> Subscriber Login</h1>
                         <Form>
-                            <Form.Input name="subscriberMail" type="email" label='Email' placeholder='Enter mail id' />
-                            <Form.Input name="subscriberPassword" type="password" label='Password' placeholder='Enter password' />  
+                            <Form.Input name="email" onChange={this.handleChange} type="email" label='Email' placeholder='Enter mail id' />
+                            <Form.Input name="password" onChange={this.handleChange} type="password" label='Password' placeholder='Enter password' />
                             <Button color='green' name="subscriberSubmit" type='submit'>Submit</Button>
                         </Form>
 
