@@ -1,9 +1,9 @@
 import React from 'react';
-import Daredevil from './images/Daredevil.jpg';
-import vip from './images/vip.jpg';
-import Strangerthings from './images/Strangerthings.jpg';
-import moneyheist from './images/moneyheist.jpg';
-import reasons from './images/reasons.jpg';
+import Daredevil from '../images/Daredevil.jpg';
+import vip from '../images/vip.jpg';
+import Strangerthings from '../images/Strangerthings.jpg';
+import moneyheist from '../images/moneyheist.jpg';
+import reasons from '../images/reasons.jpg';
 import './Banner.css';
 
 function Banner() {

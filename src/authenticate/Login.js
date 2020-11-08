@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Nav from '../Nav';
-import { Segment, Form, Button, Input } from "semantic-ui-react";
+import Nav from '../components/Nav';
+import { Segment, Form, Button} from "semantic-ui-react";
 import "./Login.css";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -17,21 +18,42 @@ class Login extends Component {
         }
     }
     onSubmit = () => {
-        localStorage.setItem('logedin', true);  
-        console.log(localStorage.getItem('logedin'));
-        this.props.history.push('/')
+        const { email, password } = this.state;
+        if (this.state.adminMail == 'root@gmail.com' && this.state.adminPassword == 'root123') {
+            localStorage.setItem('admin', 1);
+            localStorage.setItem('logedin', "true");  
+            this.props.history.push('/')
+        }
+        if (localStorage.getItem("users")) {
+            const users = JSON.parse(localStorage.getItem("users"));
+            console.log(users);
+
+            for (const [key, value] of Object.entries(users)) {
+                
+
+                if (value.email == email && value.password == password) {
+                    const add = {
+                        email: email,
+                        password: password
+                    }
+                    const user = { ...users, ...add };
+                    localStorage.setItem('users', JSON.stringify(user));
+                    localStorage.setItem('logedin', 'true');
+                    this.props.history.push('/')
+                     
+                }
+            }
+        }
     }
     componentWillMount() {
-        // const history =
         const logedin = JSON.parse(localStorage.getItem('logedin'));
-        if(logedin){
+        if(logedin === true){
             this.props.history.push('/');
         }
     }
     handleChange = (e) => {
         this.setState({[e.target.name]: e.target.value});
 
-        console.log(this.state);
     }
 
     render() {
@@ -46,7 +68,7 @@ class Login extends Component {
                         <Form>
                             <Form.Input name="email" onChange={this.handleChange} type="email" label='Email' placeholder='Enter mail id' />
                             <Form.Input name="password" onChange={this.handleChange} type="password" label='Password' placeholder='Enter password' />
-                            <Button color='green' name="subscriberSubmit" type='submit'>Submit</Button>
+                            <Button color='green' name="subscriberSubmit" onClick={this.onSubmit} type='submit'>Submit</Button>
                         </Form>
 
                     </div>
@@ -54,14 +76,14 @@ class Login extends Component {
                     <div className="login__admin">
                     <h1 className="login__header">Admin Login</h1>
                         <Form>
-                            <Form.Input name="adminMail" type="email" label='Email' placeholder='Enter mail id' />
-                            <Form.Input name="adminPassword" type="password" label='Password' placeholder='Enter password' />  
+                            <Form.Input name="adminMail" onChange={this.handleChange} type="email" label='Email' placeholder='Enter mail id' />
+                            <Form.Input name="adminPassword" onChange={this.handleChange} type="password" label='Password' placeholder='Enter password' />  
                                 <Button color='green' name="adminSubmit" type='submit' onClick={this.onSubmit}>Submit</Button>
                         </Form>
                     </div>
                 </div>
                 <div className="login__footer">
-                    Don't have an account <button className="login__footerbtn" >Register Here</button>.
+                    Don't have an account <Link to="/register">Register Here</Link>.
                 </div>
             </Segment>
         </div>

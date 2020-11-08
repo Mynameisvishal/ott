@@ -1,0 +1,10 @@
+.link{
+    background-color: #33333380;
+    color: white;
+    position: fixed;
+    margin-left: 70vw;
+    padding: 6px 4px;
+    border-radius: 4px;
+    font-weight: 600;
+    /* visibility: hidden; */
+}

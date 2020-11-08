@@ -1,7 +1,7 @@
 
 .banner{
     background-size: cover;
-    background-image: url('./images/moneyheist2.jpg');
+    background-image: url('../images/moneyheist2.jpg');
     background-position: center center;
     color: white;
     object-fit: contain;
