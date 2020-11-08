@@ -11,7 +11,7 @@ function Row({ title , fetchURL,Largeone }) {
             <h2 className="row__title">{title}</h2>
             <div className="row__posters">
                
-               
+               {console.log(fetchURL)}
                     {
                         fetchURL.map((value, key) => (
                     

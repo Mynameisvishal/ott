@@ -82,7 +82,8 @@ class Login extends Component {
                         </Form>
                     </div>
                 </div>
-                <div className="login__footer">
+                    <div className="login__footer">
+                        <small>For admin login.<br/> email = admin@gmail.com <br/>password = admin123</small><br></br>
                     Don't have an account <Link to="/register">Register Here</Link>.
                 </div>
             </Segment>

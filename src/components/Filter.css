@@ -3,8 +3,35 @@
     color: white;
     position: fixed;
     margin-left: 70vw;
-    padding: 6px 4px;
+    visibility: hidden;
     border-radius: 4px;
     font-weight: 600;
     /* visibility: hidden; */
+}
+.filter__genre{
+    display: flex;
+    flex-direction: column;
+    
+    background-color:  #42414180;
+}
+.filter__button{
+    background: #33333380;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: medium;
+    font-weight: 500;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+.filter__checkbox{
+    font-size: large;
+    padding-left: 4px;
+    color: white !important;
+    font-weight: 600;
+    margin: 6px 0;
+}
+.filter__header{
+    color: white;
+    margin-left:5px ;
 }

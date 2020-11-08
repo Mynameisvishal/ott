@@ -59,7 +59,17 @@
          #111
      );
  }
-
+.banner__add{
+  float: right;
+  visibility: hidden;
+    
+}
+.banner__visible{
+    visibility: visible;
+}
+.banner__addback{
+    border: 2px solid white;
+}
  @media only screen and (max-width: 700px) {
     .banner__description  {
         max-width: 360px;

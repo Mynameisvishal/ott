@@ -36,14 +36,16 @@ export class Nav extends Component {
         const { dropName, show } = this.state;
         
         return (
-            <div className={`navbar ${show && "nav__black"} ${localStorage.getItem('logedin') && "nav_black"} `}>
+            <div className={`navbar ${show && "nav__black"} ${JSON.parse(!localStorage.getItem('logedin')) && "nav_black"} `}>
             <h1 className={`nav__logo ${show && "nav__shadow"}`}> MOVIE BUZZ</h1>
                 <div>
                 
-                    <Filter show={show} checkGenre={ this.props.checkGenre}/>
-                <button className={`navbar__button ${show && "nav__outline"}`} onClick={this.logout.bind(this)}>
+                   { JSON.parse(localStorage.getItem('logedin'))? <Filter show={show} checkGenre={ this.props.checkGenre}/> :""}
+                    {JSON.parse(localStorage.getItem('logedin'))?
+                    <button className={`navbar__button ${show && "nav__outline"}`} onClick={this.logout.bind(this)}>
                     {JSON.parse(localStorage.getItem('logedin')) ? "Log out" : ""}
-                </button>
+                </button> :""
+                }
             </div>
         </div>
 
