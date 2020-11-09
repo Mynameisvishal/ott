@@ -24,8 +24,6 @@ class Login extends Component {
         }
         if (localStorage.getItem("users")) {
             const users = JSON.parse(localStorage.getItem("users"));
-            console.log(users);
-
             for (const [key, value] of Object.entries(users)) {
                 
 

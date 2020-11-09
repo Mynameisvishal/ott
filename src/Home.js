@@ -44,7 +44,7 @@ export class Home extends Component{
     const sort = localStorage.getItem('sort')
     if (sort == "recent") {
       currentGenreMovies.sort((movie1, movie2) => {
-        return parseInt(movie1.addedTime) - parseInt(movie2.addedTime)
+        return parseInt(movie2.addedTime)- parseInt(movie1.addedTime)
       });
     }
     if (sort == "rating") {
@@ -57,6 +57,8 @@ export class Home extends Component{
   }
 
   render() {
+    // const [data, changeData] = useLocalStorage('Movies', {});
+
     return (
        
 

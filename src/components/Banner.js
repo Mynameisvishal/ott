@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button,Form,Input, Header, Icon, Image, Modal } from 'semantic-ui-react'
+import { Button,Form,Input, Icon, Modal } from 'semantic-ui-react'
 import './Banner.css';
 import moneyheist from '../images/moneyheist.jpg';
 import { movies } from '../request';
@@ -11,7 +11,8 @@ export class Banner extends Component {
     MovieDetails: "",
     Genre: "",
     Language: "",
-    file: null,
+    rating: 0,
+    file:'',
   };
   openModal = () => this.setState({ modal: true });
 
@@ -23,36 +24,51 @@ export class Banner extends Component {
     
   addFile = event => {
     const file = event.target.files[0];
-    if (file) {
-    }
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      localStorage.setItem('recentImage', reader.result);
+    })
+    reader.readAsDataURL(file);
+    // if (file) {
+    //   console.log(file);
+    //   // FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
+    // }
   };
   
+
   handleSubmit = event => {
     event.preventDefault();
     var date = new Date();
+    const image = (localStorage.getItem('recentImage'));
+    console.log(image);
     if (this.isFormValid(this.state)) {
       var subs = [];
       subs.push(this.state.Genre);
-      const adventure = {
-        beta: {
-          name: this.state.MovieName,
-          image: this.state.file,
-          description: this.state.MovieDetails,
-          genre: subs,
-          language: this.state.Language,
-          addedTime: date.getTime(),
-        }
-      };
-      this.setState({
-        name: "",
-        image: "",
-        description: "",
-        genre: "",
-        language: ""
-      })
-      const Movies = { ...movies, ...adventure };
-      localStorage.setItem("Movies", JSON.stringify(Movies));
-      this.setState({ modal: false })
+      if (this.state.rating < 6 && this.state.rating > 0) {
+        
+        const adventure = {
+          beta: {
+            name: this.state.MovieName,
+            image: image,
+            description: this.state.MovieDetails,
+            genre: subs,
+            language: this.state.Language,
+            addedTime: date.getTime(),
+            rating: this.state.rating,
+          }
+        };
+        console.log(adventure);
+        this.setState({
+          name: "",
+          image: "",
+          description: "",
+          genre: "",
+          language: ""
+        })
+        const Movies = { ...movies, ...adventure };
+        localStorage.setItem("Movies", JSON.stringify(Movies));
+        this.setState({ modal: false })
+      }
             
     }
   };
@@ -128,6 +144,15 @@ export class Banner extends Component {
                     label="Language"
                     name="Language"
                     placeholder="Enter language."
+                    onChange={this.handleChange}
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <Input
+                    fluid
+                    label="Rating"
+                    name="rating"
+                    placeholder="Enter rating between 1-5."
                     onChange={this.handleChange}
                   />
                 </Form.Field>
