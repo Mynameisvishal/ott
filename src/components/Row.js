@@ -9,8 +9,13 @@ function Row({ title, fetchURL, Largeone }) {
     const closeModal = () => setModal(false);
 
     const makeModalOn = (value) => {
-        setMovie(value);
-        setModal(true);
+        if (JSON.parse(localStorage.getItem('admin')) === 1) {
+            
+        } else {
+            
+            setMovie(value);
+            setModal(true);
+        }
     }
 
     const submit = () => {
