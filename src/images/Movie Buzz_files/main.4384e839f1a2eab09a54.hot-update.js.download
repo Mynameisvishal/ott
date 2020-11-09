@@ -1,0 +1,370 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/request.js":
+/*!************************!*\
+  !*** ./src/request.js ***!
+  \************************/
+/*! exports provided: genres, movies, requests */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(__react_refresh_utils__, __react_refresh_error_overlay__) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "genres", function() { return genres; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "movies", function() { return movies; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requests", function() { return requests; });
+/* harmony import */ var _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/blacklist.jpg */ "./src/images/blacklist.jpg");
+/* harmony import */ var _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/ginnywedssunny.jpg */ "./src/images/ginnywedssunny.jpg");
+/* harmony import */ var _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/paranormal.jpg */ "./src/images/paranormal.jpg");
+/* harmony import */ var _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/spartacus.jpg */ "./src/images/spartacus.jpg");
+/* harmony import */ var _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/uncutgem.jpg */ "./src/images/uncutgem.jpg");
+/* harmony import */ var _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./images/irishman.jpg */ "./src/images/irishman.jpg");
+/* harmony import */ var _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./images/marriagestory.jpg */ "./src/images/marriagestory.jpg");
+/* harmony import */ var _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./images/spiderman.jpg */ "./src/images/spiderman.jpg");
+/* harmony import */ var _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./images/roma.jpg */ "./src/images/roma.jpg");
+/* harmony import */ var _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./images/theoutpost.jpg */ "./src/images/theoutpost.jpg");
+/* harmony import */ var _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./images/thetown.jpg */ "./src/images/thetown.jpg");
+/* harmony import */ var _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./images/themaster.jpg */ "./src/images/themaster.jpg");
+/* harmony import */ var _images_gunjan_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./images/gunjan.jpg */ "./src/images/gunjan.jpg");
+/* harmony import */ var _images_dangal_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./images/dangal.jpg */ "./src/images/dangal.jpg");
+/* harmony import */ var _images_kabir_jpg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./images/kabir.jpg */ "./src/images/kabir.jpg");
+/* harmony import */ var _images_raatakeli_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./images/raatakeli.jpg */ "./src/images/raatakeli.jpg");
+/* harmony import */ var _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./images/saaho.jpg */ "./src/images/saaho.jpg");
+/* harmony import */ var _images_lust_jpg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./images/lust.jpg */ "./src/images/lust.jpg");
+/* harmony import */ var _images_Daredevil_jpg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./images/Daredevil.jpg */ "./src/images/Daredevil.jpg");
+/* harmony import */ var _images_vip_jpg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./images/vip.jpg */ "./src/images/vip.jpg");
+/* harmony import */ var _images_Strangerthings_jpg__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./images/Strangerthings.jpg */ "./src/images/Strangerthings.jpg");
+/* harmony import */ var _images_moneyheist_jpg__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./images/moneyheist.jpg */ "./src/images/moneyheist.jpg");
+/* harmony import */ var _images_reasons_jpg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./images/reasons.jpg */ "./src/images/reasons.jpg");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! react-refresh/runtime */ "./node_modules/react-refresh/runtime.js");
+__webpack_require__.$Refresh$.setup(module.i);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const genres = ["Action Movie", "Romantic Movie", "Comedy Movie", "Crime Movie"]; // export const ComedyMovies = ["PARANORMAL", "The Master", "Gungan Saxena"];
+// export const ActionMovies = ["BLACKLIST", "SPARTACUS","Uncut Gem","Spider-Man:Into the Spider-Verse","The Outpost","Dangal","Saaho"];
+// export const RomanticMovies =['GINNY WEDS SUNNY',"Marriage Story","Roma", "Kabir Singh","Lust Stories"]
+// export const CrimeMovies = ["The Irishman","The Town","Raat Akelli"];
+
+const movies = {
+  BLACKLIST: {
+    name: "BLACKLIST",
+    image: _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"],
+    description: "The Blacklist is an American crime thriller television series that premiered on NBC on September 23, 2013. The show follows Raymond \"Red\" Reddington (James Spader), a former U.S. Navy officer turned high-profile criminal who voluntarily surrenders to the FBI after eluding capture for decades.",
+    genre: ["Action Movie", "Crime Movie"],
+    addedTime: '1604765928',
+    language: "English"
+  },
+  GINNYWEDSSUNNY: {
+    name: 'GINNY WEDS SUNNY',
+    image: _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"],
+    description: "Ginny Weds Sunny is a 2020 Indian Hindi romantic comedy film starring Yami Gautam and Vikrant Massey as the titular characters, Ginny and Sunny, respectively. It is directed by debutant Puneet Khanna and produced by Vinod Bachchan.",
+    genre: ["Romantic Movie", "Comedy Movie"],
+    language: "English",
+    addedTime: '0'
+  },
+  PARANORMAL: {
+    name: "PARANORMAL",
+    image: _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"],
+    description: "Larry (Kevin P. Farley) sets up video cameras to capture the poltergeists that keep him awake at night. He quickly discovers that his house is infested with freaky clowns, weed-smoking demons and uninvited celebrities.",
+    genre: ["Comedy Movie", "Crime Movie"],
+    language: "English",
+    addedTime: '1604760928'
+  },
+  SPARTACUS: {
+    name: "SPARTACUS",
+    image: _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"],
+    description: "Spartacus is a 1960 American epic historical drama film directed by Stanley Kubrick, written by Dalton Trumbo, and based on the 1951 novel of the same title by Howard Fast. It is inspired by the life story of Spartacus, the leader of a slave revolt in antiquity, and the events of the Third Servile War.",
+    genre: ["Action Movie", "Crime Movie"],
+    language: "English",
+    addedTime: '10'
+  },
+  UncutGem: {
+    name: "Uncut Gem",
+    image: _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"],
+    description: "A charismatic jeweller makes a high-stakes bet that could lead to the windfall of a lifetime. In a precarious high-wire act, he must balance business, family and adversaries on all sides in pursuit of the ultimate win.",
+    genre: ["Action Movie", "Crime Movie"],
+    language: "English",
+    addedTime: '1604763928'
+  },
+  TheIrishman: {
+    name: "The Irishman",
+    image: _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"],
+    description: "In the 1950s, truck driver Frank Sheeran gets involved with Russell Bufalino and his Pennsylvania crime family. As Sheeran climbs the ranks to become a top hit man, he also goes to work for Jimmy Hoffa -- a powerful Teamster tied to organized crime.",
+    genre: ["Crime Movie", "Comedy Movie"],
+    language: "English",
+    addedTime: '1604735928'
+  },
+  marriagestory: {
+    name: "Marriage Story",
+    image: _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"],
+    description: "Marriage Story is a 2019 drama film written and directed by Noah Baumbach, who produced the film with David Heyman. It stars Scarlett Johansson and Adam Driver, with Laura Dern, Alan Alda, Ray Liotta, Julie Hagerty, and Merritt Wever in supporting roles.",
+    genre: ["Romantic Movie", "Comedy Movie"],
+    language: "English",
+    addedTime: '1604735928'
+  },
+  Spiderman: {
+    name: "Spider-Man:Into the Spider-Verse",
+    image: _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"],
+    description: "After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.",
+    genre: ["Action Movie", "Comedy Movie"],
+    language: "English",
+    addedTime: '1604715928'
+  },
+  Roma: {
+    name: "Roma",
+    image: _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"],
+    description: "Roma is a 2018 Mexican drama film written and directed by Alfonso Cuarón, who also produced, shot, and co-edited it. Set in 1970 and 1971, Roma follows the life of a live-in housekeeper of a middle-class family, as a semi-autobiographical take on Cuarón's upbringing in the Colonia Roma neighborhood of Mexico City.",
+    genre: ["Romantic Movie", "Comedy Movie"],
+    language: "English",
+    addedTime: '1604725928'
+  },
+  TheOutpost: {
+    name: "The Outpost",
+    image: _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"],
+    description: "A small unit of U.S. soldiers, alone at the remote Combat Outpost Keating, located deep in the valley of three mountains in Afghanistan, battles an overwhelming force of Taliban fighters in a coordinated attack.",
+    genre: ["Action Movie", "Crime Movie"],
+    language: "English",
+    addedTime: '1604735928'
+  },
+  TheTown: {
+    name: "The Town",
+    image: _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"],
+    description: "A proficient group of thieves rob a bank and hold Claire, the assistant manager, hostage. Things begin to get complicated when one of the crew members falls in love with Claire.",
+    genre: ["Crime Movie", 'Romantic Movie'],
+    language: "English",
+    addedTime: '1604745928'
+  },
+  TheMaster: {
+    name: "The Master",
+    image: _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"],
+    description: "Freddie, a World War II veteran, is unable to deal with the post-war society. However, when he comes across a religious movement known as The Cause, he finds solace in it.",
+    genre: ["Comedy Movie", "Crime Movie", 'Romantic Movie'],
+    language: "English",
+    addedTime: '1604755928'
+  },
+  GunganSaxena: {
+    name: "Gungan Saxena",
+    image: _images_gunjan_jpg__WEBPACK_IMPORTED_MODULE_12__["default"],
+    description: "The life of Air Force pilot, Gunjan Saxena, the first Indian female pilot in combat.",
+    genre: ["Comedy Movie", "Crime Movie", 'Romantic Movie'],
+    language: "Hindi",
+    addedTime: '1604755928'
+  },
+  Dangal: {
+    name: "Dangal",
+    image: _images_dangal_jpg__WEBPACK_IMPORTED_MODULE_13__["default"],
+    description: "Mahavir Singh Phogat, a former wrestler, decides to fulfil his dream of winning a gold medal for his country by training his daughters for the Commonwealth Games despite the existing social stigmas.",
+    genre: ["Action Movie", "Comedy Movie", 'Romantic Movie'],
+    language: "Hindi",
+    addedTime: '1604165928'
+  },
+  KabirSingh: {
+    name: "Kabir Singh",
+    image: _images_kabir_jpg__WEBPACK_IMPORTED_MODULE_14__["default"],
+    description: "Kabir, a genius yet hostile medical student, falls in love with Preeti from his college. When Preeti's father spots the couple kissing, he opposes their relationship and decides to marry her off.",
+    genre: ["Romance Movie", "Comedy Movie", 'Romantic Movie'],
+    language: "Hindi",
+    addedTime: '1604365928'
+  },
+  RaatAkelli: {
+    name: "Raat Akelli",
+    image: _images_raatakeli_jpg__WEBPACK_IMPORTED_MODULE_15__["default"],
+    description: "When a newly married landlord is murdered, a misfit cop's investigation is complicated by the victim's secretive family.",
+    genre: ["Crime Movie", "Comedy Movie", 'Romantic Movie'],
+    language: "Hindi",
+    addedTime: '1604465928'
+  },
+  Saaho: {
+    name: "Saaho",
+    image: _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__["default"],
+    description: "An undercover agent and his partner go after a thief who has stolen 2,000 crore rupees. Soon, they realise that the case is linked to the death of a crime lord and an emerging gang war.",
+    genre: ["Action Movie", "Comedy Movie", 'Romantic Movie'],
+    language: "Hindi",
+    addedTime: '1604565928'
+  },
+  LustStories: {
+    name: "Lust Stories",
+    image: _images_lust_jpg__WEBPACK_IMPORTED_MODULE_17__["default"],
+    description: "An anthology of four stories that sheds light on modern relationships from the viewpoint of the Indian woman.",
+    genre: ["Romantic Movie", "Crime Movie", "Comedy Movie"],
+    language: "Hindi",
+    addedTime: '1604065928'
+  },
+  Daredevil: {
+    name: "Daredevil",
+    image: _images_Daredevil_jpg__WEBPACK_IMPORTED_MODULE_18__["default"],
+    description: "Marvel's Daredevil, or simply Daredevil, is an American streaming television series created for Netflix by Drew Goddard, based on the Marvel Comics character of the same name.",
+    genre: ["Action Movie", "Comedy Movie", 'Romantic Movie'],
+    language: "English",
+    addedTime: '1600765928'
+  },
+  VelaiyillaPattathar: {
+    name: "Velaiyilla Pattathar",
+    image: _images_vip_jpg__WEBPACK_IMPORTED_MODULE_19__["default"],
+    description: "Velaiilla Pattadhari ( transl. Unemployed Graduate), popularly referred to as VIP, is a 2014 Indian Tamil-language masala film written,and filmed by Velraj, in his directorial debut. The film features Dhanush, Amala Paul, while Vivek, Saranya Ponvannan, Samuthirakani and Surbhi play supporting roles.",
+    genre: ['Romantic Movie', "Comedy Movie"],
+    language: 'Tamil',
+    addedTime: '1604765921'
+  },
+  Strangerthings: {
+    name: 'Stranger Things',
+    image: _images_Strangerthings_jpg__WEBPACK_IMPORTED_MODULE_20__["default"],
+    description: "SeasonsTV Thrillers. When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl. Starring:Winona Ryder, David Harbour, Finn Wolfhard. Creators.",
+    genre: ["Action Movie", "Crime Movie", "Comedy Movie", 'Romantic Movie'],
+    language: 'English',
+    addedTime: '1604760922'
+  },
+  Moneyheist: {
+    name: 'Money Heist',
+    image: _images_moneyheist_jpg__WEBPACK_IMPORTED_MODULE_21__["default"],
+    description: "Money Heist (Spanish: La casa de papel, \"The House of Paper\") is a Spanish heist crime drama television series created by Álex Pina. The series traces two long-prepared heists led by the Professor (Álvaro Morte), one on the Royal Mint of Spain, and one on the Bank of Spain.",
+    genre: ["Crime Movie", 'Romantic Movie'],
+    language: "English",
+    addedTime: '1604765926'
+  },
+  ReasonsWhy: {
+    name: "13 Reasons Why",
+    image: _images_reasons_jpg__WEBPACK_IMPORTED_MODULE_22__["default"],
+    description: "13 Reasons Why (stylized onscreen as TH1RTEEN R3ASONS WHY) is an American teen drama streaming television series developed for Netflix by Brian Yorkey, based on the 2007 novel Thirteen Reasons Why by Jay Asher.",
+    genre: ['Romantic Movie'],
+    language: "English",
+    addedTime: '1604765913'
+  }
+};
+const requests = {
+  fetchMovieBuzzOriginals: {
+    id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+    names: ['BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS', 'Roma', 'UncutGem', 'RaatAkelli', 'Saaho', 'LustStories', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster'],
+    images: [_images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_raatakeli_jpg__WEBPACK_IMPORTED_MODULE_15__["default"], _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__["default"], _images_lust_jpg__WEBPACK_IMPORTED_MODULE_17__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"], _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"], _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"]],
+    languages: ['English', 'English', 'English', 'English', 'English', 'English', 'English', 'Hindi', 'Hindi', 'English', 'English', 'English', 'English', 'English', 'English', 'English']
+  },
+  fetchTrending: {
+    id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    names: ['UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster', 'BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
+    images: [_images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"], _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"], _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"], _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]],
+    languages: ['English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English']
+  },
+  fetchIndianMovies: {
+    id: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    names: ['Gungan Saxena', 'Dangal', 'Kabir Singh', 'RaatAkelli', 'Saaho', 'LustStories', 'GINNYWEDSSUNNY', 'PARANORMAL', 'UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster', 'BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
+    images: [_images_gunjan_jpg__WEBPACK_IMPORTED_MODULE_12__["default"], _images_dangal_jpg__WEBPACK_IMPORTED_MODULE_13__["default"], _images_kabir_jpg__WEBPACK_IMPORTED_MODULE_14__["default"], _images_raatakeli_jpg__WEBPACK_IMPORTED_MODULE_15__["default"], _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__["default"], _images_lust_jpg__WEBPACK_IMPORTED_MODULE_17__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"], _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"], _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"], _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]],
+    languages: ['English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English', 'English']
+  },
+  fetchTopRated: {
+    names: ['LustStories', 'MarriageStory', 'GINNYWEDSSUNNY', 'UncutGems', 'SPARTACUS', 'Roma', 'RaatAkelli', 'Saaho', 'BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS', 'Roma', 'UncutGem', 'RaatAkelli', 'Saaho', 'LustStories', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster'],
+    images: [_images_lust_jpg__WEBPACK_IMPORTED_MODULE_17__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_raatakeli_jpg__WEBPACK_IMPORTED_MODULE_15__["default"], _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__["default"], _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_raatakeli_jpg__WEBPACK_IMPORTED_MODULE_15__["default"], _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__["default"], _images_lust_jpg__WEBPACK_IMPORTED_MODULE_17__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"], _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"], _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"]]
+  },
+  fetchActionMovies: {
+    names: ['Dangal', 'Saaho', 'Spiderman', 'TheIrishman', 'UncutGems', 'BLACKLIST', 'PARANORMAL', 'SPARTACUS', 'Roma', 'UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster', 'BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
+    images: [_images_dangal_jpg__WEBPACK_IMPORTED_MODULE_13__["default"], _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"], _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"], _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"], _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]]
+  },
+  fetchComedyMovies: {
+    names: ['BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS', 'Roma', 'UncutGem', 'RaatAkelli', 'Saaho', 'LustStories', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster'],
+    images: [_images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_raatakeli_jpg__WEBPACK_IMPORTED_MODULE_15__["default"], _images_saaho_jpg__WEBPACK_IMPORTED_MODULE_16__["default"], _images_lust_jpg__WEBPACK_IMPORTED_MODULE_17__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"], _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"], _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"]]
+  },
+  fetchHorrorMovies: {
+    names: ['UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster', 'BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
+    images: [_images_uncutgem_jpg__WEBPACK_IMPORTED_MODULE_4__["default"], _images_irishman_jpg__WEBPACK_IMPORTED_MODULE_5__["default"], _images_marriagestory_jpg__WEBPACK_IMPORTED_MODULE_6__["default"], _images_spiderman_jpg__WEBPACK_IMPORTED_MODULE_7__["default"], _images_roma_jpg__WEBPACK_IMPORTED_MODULE_8__["default"], _images_theoutpost_jpg__WEBPACK_IMPORTED_MODULE_9__["default"], _images_thetown_jpg__WEBPACK_IMPORTED_MODULE_10__["default"], _images_themaster_jpg__WEBPACK_IMPORTED_MODULE_11__["default"], _images_blacklist_jpg__WEBPACK_IMPORTED_MODULE_0__["default"], _images_ginnywedssunny_jpg__WEBPACK_IMPORTED_MODULE_1__["default"], _images_paranormal_jpg__WEBPACK_IMPORTED_MODULE_2__["default"], _images_spartacus_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]]
+  }
+};
+
+const currentExports = __react_refresh_utils__.getModuleExports(module.i);
+__react_refresh_utils__.registerExportsForReactRefresh(currentExports, module.i);
+
+if (true) {
+  const isHotUpdate = !!module.hot.data;
+  const prevExports = isHotUpdate ? module.hot.data.prevExports : null;
+
+  if (__react_refresh_utils__.isReactRefreshBoundary(currentExports)) {
+    module.hot.dispose(
+      /**
+       * A callback to performs a full refresh if React has unrecoverable errors,
+       * and also caches the to-be-disposed module.
+       * @param {*} data A hot module data object from Webpack HMR.
+       * @returns {void}
+       */
+      function hotDisposeCallback(data) {
+        // We have to mutate the data object to get data registered and cached
+        data.prevExports = currentExports;
+      }
+    );
+    module.hot.accept(
+      /**
+       * An error handler to allow self-recovering behaviours.
+       * @param {Error} error An error occurred during evaluation of a module.
+       * @returns {void}
+       */
+      function hotErrorHandler(error) {
+        if (
+          typeof __react_refresh_error_overlay__ !== 'undefined' &&
+          __react_refresh_error_overlay__
+        ) {
+          __react_refresh_error_overlay__.handleRuntimeError(error);
+        }
+
+        if (typeof __react_refresh_test__ !== 'undefined' && __react_refresh_test__) {
+          if (window.onHotAcceptError) {
+            window.onHotAcceptError(error.message);
+          }
+        }
+
+        __webpack_require__.c[module.i].hot.accept(hotErrorHandler);
+      }
+    );
+
+    if (isHotUpdate) {
+      if (
+        __react_refresh_utils__.isReactRefreshBoundary(prevExports) &&
+        __react_refresh_utils__.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)
+      ) {
+        module.hot.invalidate();
+      } else {
+        __react_refresh_utils__.enqueueUpdate(
+          /**
+           * A function to dismiss the error overlay after performing React refresh.
+           * @returns {void}
+           */
+          function updateCallback() {
+            if (
+              typeof __react_refresh_error_overlay__ !== 'undefined' &&
+              __react_refresh_error_overlay__
+            ) {
+              __react_refresh_error_overlay__.clearRuntimeErrors();
+            }
+          }
+        );
+      }
+    }
+  } else {
+    if (isHotUpdate && __react_refresh_utils__.isReactRefreshBoundary(prevExports)) {
+      module.hot.invalidate();
+    }
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js"), __webpack_require__(/*! ./node_modules/react-dev-utils/refreshOverlayInterop.js */ "./node_modules/react-dev-utils/refreshOverlayInterop.js")))
+
+/***/ })
+
+})
+//# sourceMappingURL=main.4384e839f1a2eab09a54.hot-update.js.map

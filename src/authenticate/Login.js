@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav';
-import { Segment, Form, Button} from "semantic-ui-react";
+import { Message, Form, Button} from "semantic-ui-react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 
@@ -58,9 +58,10 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
-            <Nav />
-            <Segment className="login__segment">
+            <div className="login__body">
+            <h1 className="login__logo">MOVIE BUZZ</h1>
+                <div className="login__segment">
+                    
                 <div className="login__flex">
 
                     <div className="login__sub">
@@ -83,10 +84,13 @@ class Login extends Component {
                     </div>
                 </div>
                     <div className="login__footer">
-                        <small>For admin login.<br/> email = admin@gmail.com <br/>password = admin123</small><br></br>
+                    <Message>
                     Don't have an account <Link to="/register">Register Here</Link>.
+                    </Message>
+                    {/* Don't have an account <Link to="/register">Register Here</Link>.<br/> */}
+                        {/* <small>For admin login.<br/> email = admin@gmail.com <br/>password = admin123</small><br></br> */}
                 </div>
-            </Segment>
+            </div>
         </div>
         )
     }

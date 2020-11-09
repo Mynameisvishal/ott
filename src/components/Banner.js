@@ -22,24 +22,28 @@ export class Banner extends Component {
     };
     
     addFile = event => {
-        const file = event.target.files[0];
-        if (file) {
+      const file = event.target.files[0];
+      let freader = new FileReader();
+      if (file) {
+          
           this.setState({ file });
         }
     };
 
     handleSubmit = event => {
-        event.preventDefault();
+      event.preventDefault();
+      var date = new Date();
         if (this.isFormValid(this.state)) {
             var subs = [];
             subs.push(this.state.Genre);
             const adventure = {
-                sigma: {
+                beta: {
                     name: this.state.MovieName,
                     image: this.state.file,
                     description: this.state.MovieDetails,
                     genre: subs,
                     language: this.state.Language,
+                    addedTime: date.getTime(),
                 }
             };
             console.log(adventure);
@@ -85,12 +89,13 @@ export class Banner extends Component {
 
             <div className="banner__fade" />
             <div>
-                <span className="banner__addback">
+              <span className="banner__addback">
+              
                     <Icon className={`banner__add ${JSON.parse(localStorage.getItem('admin'))=== 1? "banner__visible" : ""}`} size='big' name="add" onClick={this.openModal} />
                 </span> 
   
             <Modal basic open={modal} onClose={this.closeModal}>
-                <Modal.Header>Add Movies</Modal.Header>
+                <Modal.Header>Add Movie</Modal.Header>
                 <Modal.Content>
             <Form onSubmit={this.handleSubmit} >
               <Form.Field>

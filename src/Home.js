@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import Nav from "./components/Nav";
 import Banner from './components/Banner';
 import Row from "./components/Row";
-// import { movies } from './request';
+import FilterList from './components/FilterList';
+import { movies } from './request';
 
 export class Home extends Component{
   constructor(props) {
     super();
     this.state = {
       filterGenre: {},
+      filteron: false,
       selectedGenre: [],
+
     }
   }
   checkGenre = (value) => {
@@ -41,6 +44,8 @@ export class Home extends Component{
   }
  
   componentWillMount() {
+    
+    this.setState({filteron: JSON.parse(localStorage.getItem('filterItem'))})
     const logedin = JSON.parse(localStorage.getItem('logedin'));
     if(logedin === false){
       this.props.history.push('/login');
@@ -48,26 +53,30 @@ export class Home extends Component{
     
   }
   Selectedgenrelist = (selectedGenre) => {
-    const movies = JSON.parse(localStorage.getItem('Movies'));
+    // const movies = JSON.parse(localStorage.getItem('Movies'));
 
     console.log(selectedGenre);
     for (const [key, value] of Object.entries(movies)) { 
       // selectedGenre.map()
     }
   }
+  // var selectedGenre = ["Action Movie", "Crime Movie"];
+  // var isGenreSelected = false
+  // selectedGenre.map((g2,key) => (
+  //   g2=== genre ? isGenreSelected = true : ""
+  // ))
+  // if (!isGenreSelected) {
+  //   return
+  // }
   genrelist = (genre) => {
-    const movies = JSON.parse(localStorage.getItem('Movies'));
     var currentGenreMovies = [];
-    // var selectedGenre = ["Action Movie", "Crime Movie"];
-    // var isGenreSelected = false
-    // selectedGenre.map((g2,key) => (
-    //   g2=== genre ? isGenreSelected = true : ""
-    // ))
-    // if (!isGenreSelected) {
-    //   return
-    // }
-    for (const [key, value] of Object.entries(movies)) {
-      
+    var storedMovies = localStorage.getItem('Movies')
+    if (!storedMovies) {
+      localStorage.setItem('Movies', JSON.stringify(movies))
+      storedMovies = JSON.stringify(movies)
+    }
+    storedMovies = JSON.parse(storedMovies)
+    for (const [key, value] of Object.entries(storedMovies)) {
       value.genre.map((g1, key) => (
         (g1 === genre) ?
           
@@ -76,12 +85,22 @@ export class Home extends Component{
         
       ))
     }
+    console.log(currentGenreMovies)
+    const sort = localStorage.getItem('sort')
+    if ( sort == "recent") {
+        console.log('');
+        currentGenreMovies.sort((movie1, movie2) => {
+            console.log(movie1.addedTime);
+          console.log(movie2.addedTime);
+          return parseInt(movie1.addedTime) - parseInt(movie2.addedTime)
+        });
+    }
      return currentGenreMovies
    
   }
 
   render() {
-    const { filterGenre,selectedGenre } = this.state;
+    const { filterGenre,filteron,selectedGenre } = this.state;
     return (
        
 
@@ -89,13 +108,24 @@ export class Home extends Component{
 
         <Nav checkGenre={this.checkGenre.bind(this)}/>
         <Banner />
-        <div>
+        
+        {this.state.filteron ?
           
-        <Row title={"Action Movie"} fetchURL={this.genrelist("Action Movie")} Largeone/>
-        <Row title={"Romantic Movie"} fetchURL={this.genrelist("Romantic Movie")} />
+            <FilterList />
+           :
+          <div>
+            <Row title={"Action Movie"} fetchURL={this.genrelist("Action Movie")} Largeone/>
+            <Row title={"Romantic Movie"} fetchURL={this.genrelist("Romantic Movie")} />
+            <Row title={"Comedy Movie"} fetchURL={this.genrelist("Comedy Movie")} />
+            <Row title={"Crime Movie"} fetchURL={this.genrelist("Crime Movie")} /> 
+          </div>
+            
+        }
+       
+        {/* <Row title={"Romantic Movie"} fetchURL={this.genrelist("Romantic Movie")} />
         <Row title={"Comedy Movie"} fetchURL={this.genrelist("Comedy Movie")} />
-        <Row title={"Crime Movie"} fetchURL={this.genrelist("Crime Movie")} /> 
-        </div>
+        <Row title={"Crime Movie"} fetchURL={this.genrelist("Crime Movie")} />  */}
+        
         
           
          

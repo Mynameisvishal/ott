@@ -124,7 +124,7 @@ class Register extends React.Component {
     
         return (
             <React.Fragment>
-            <Nav />
+            <h1 className="register__logo">MOVIE BUZZ</h1>
             <Grid textAlign="center" verticalAlign="middle" className="register__form">
                 <Grid.Column style={{ maxWidth: 450 }}>
                     <Header as="h1" icon color="orange" textAlign="center">

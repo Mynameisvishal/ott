@@ -8,10 +8,6 @@
     z-index: 1;
     display: flex;
 }
-.nav__black{
-    background-color: #111;
-    transition: all 0.7s;
-}
 
 .nav__logo{
     top: 5;
@@ -47,21 +43,25 @@
     outline: 1.2px red !important;
     
 }
- .navbar__button:hover{
-     background: white;
-     color: black;
- }
+.navbar__button:hover{
+    background: white;
+    color: black;
+}
 
- .nav__search{
-     position: fixed;
-     margin-left: 70vw;
+.nav__search{
+    position: fixed;
+    margin-left: 70vw;
     visibility: hidden;
- }
- .nav__dropdown{
-     position: fixed;
-     left: 950px;
-     visibility: hidden;
+}
+.nav__dropdown{
+    position: fixed;
+    left: 950px;
+    visibility: hidden;
     }
+.nav__black{
+    background-color: #111 !important;
+    transition: all 0.7s;
+}
 .nav__visible{
     visibility: visible;
 }

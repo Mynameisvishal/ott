@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Filter from './Filter';
 import "./Nav.css";
+import Sort from './Sort';
 
 
 export class Nav extends Component {
@@ -11,14 +12,15 @@ export class Nav extends Component {
             dropName: 'sort by',
         }    
     }
-    logout = () => {
+    logout = (props) => {
 
         console.log('Logout');
         localStorage.setItem('logedin', 'false');
         if (localStorage.getItem('admin') == true) {
             localStorage.setItem('admin', 0);
         }
-        // this.props.history.push('/login')
+
+        window.location.reload();
     }
 
     componentDidMount() {
@@ -34,12 +36,12 @@ export class Nav extends Component {
     
     render() {
         const { dropName, show } = this.state;
-        
+        const background = this.props;
         return (
-            <div className={`navbar ${show && "nav__black"} ${JSON.parse(!localStorage.getItem('logedin')) && "nav_black"} `}>
+            <div className={`navbar ${show && "nav__black"} ${background ==="true" ? "nav__black":""} `}>
             <h1 className={`nav__logo ${show && "nav__shadow"}`}> MOVIE BUZZ</h1>
                 <div>
-                
+                    {show ? <Sort /> :""}
                    { JSON.parse(localStorage.getItem('logedin'))? <Filter show={show} checkGenre={ this.props.checkGenre}/> :""}
                     {JSON.parse(localStorage.getItem('logedin'))?
                     <button className={`navbar__button ${show && "nav__outline"}`} onClick={this.logout.bind(this)}>
