@@ -29,13 +29,11 @@ export class Banner extends Component {
       localStorage.setItem('recentImage', reader.result);
     })
     reader.readAsDataURL(file);
-    // if (file) {
-    //   console.log(file);
-    //   // FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
-    // }
   };
   
-
+  reload = () => {
+    window.location.reload();
+  }
   handleSubmit = event => {
     event.preventDefault();
     var date = new Date();
@@ -68,6 +66,7 @@ export class Banner extends Component {
         const Movies = { ...movies, ...adventure };
         localStorage.setItem("Movies", JSON.stringify(Movies));
         this.setState({ modal: false })
+        this.reload();
       }
             
     }
