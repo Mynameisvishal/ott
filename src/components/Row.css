@@ -29,3 +29,17 @@
 .row__large{
     max-height: 250px !important;
 }
+
+.modal__flex{
+    display: flex;
+    justify-content: space-around;
+}
+.modal__description{
+    width: 50vw;
+}
+.modal__header{
+    color: white !important;
+}
+.modal__rating{
+    background-color: white !important;
+}

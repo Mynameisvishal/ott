@@ -23,10 +23,6 @@ import moneyheist from './images/moneyheist.jpg';
 import reasons from './images/reasons.jpg';
 
 export const genres = ["Action Movie", "Romantic Movie", "Comedy Movie", "Crime Movie"];
-// export const ComedyMovies = ["PARANORMAL", "The Master", "Gungan Saxena"];
-// export const ActionMovies = ["BLACKLIST", "SPARTACUS","Uncut Gem","Spider-Man:Into the Spider-Verse","The Outpost","Dangal","Saaho"];
-// export const RomanticMovies =['GINNY WEDS SUNNY',"Marriage Story","Roma", "Kabir Singh","Lust Stories"]
-// export const CrimeMovies = ["The Irishman","The Town","Raat Akelli"];
 
 export const movies = {
     BLACKLIST: {
@@ -35,7 +31,8 @@ export const movies = {
         description: "The Blacklist is an American crime thriller television series that premiered on NBC on September 23, 2013. The show follows Raymond \"Red\" Reddington (James Spader), a former U.S. Navy officer turned high-profile criminal who voluntarily surrenders to the FBI after eluding capture for decades.",
         genre: ["Action Movie","Crime Movie"],
         addedTime: '1604765928',
-        language:"English"
+        language: "English",
+        rating:'2',
     },
     GINNYWEDSSUNNY: {
         name: 'GINNY WEDS SUNNY',
@@ -44,6 +41,7 @@ export const movies = {
         genre:["Romantic Movie","Comedy Movie"],
         language: "English",
         addedTime: '0',
+        rating:'2',
     },
     PARANORMAL: {
         name: "PARANORMAL",
@@ -52,6 +50,8 @@ export const movies = {
         genre:["Comedy Movie","Crime Movie"],
         language: "English",
         addedTime: '1604760928',
+        rating: '3',
+
     },
     SPARTACUS: {
         name: "SPARTACUS",
@@ -60,6 +60,7 @@ export const movies = {
         genre:["Action Movie","Crime Movie"],
         language: "English",
         addedTime: '10',
+        rating: '3',
     },
     UncutGem: {
         name: "Uncut Gem",
@@ -68,6 +69,7 @@ export const movies = {
         genre:["Action Movie","Crime Movie"],
         language: "English",
         addedTime: '1604763928',
+        rating: '4',
     },
     TheIrishman: {
         name: "The Irishman",
@@ -76,6 +78,7 @@ export const movies = {
         genre:["Crime Movie","Comedy Movie"],
         language: "English",
         addedTime: '1604735928',
+        rating: '5',
     },
     marriagestory: {
         name: "Marriage Story",
@@ -84,6 +87,7 @@ export const movies = {
         genre:["Romantic Movie","Comedy Movie"],
         language: "English",
         addedTime: '1604735928',
+        rating: '1',
     },
     Spiderman: {
         name: "Spider-Man:Into the Spider-Verse",
@@ -92,6 +96,7 @@ export const movies = {
         genre:["Action Movie","Comedy Movie"],
         language: "English",
         addedTime: '1604715928',
+        rating:'4',
     },
     Roma: {
         name: "Roma",
@@ -100,6 +105,7 @@ export const movies = {
         genre:["Romantic Movie","Comedy Movie"],
         language: "English",
         addedTime: '1604725928',
+        rating:'5',
     },
     TheOutpost: {
         name: "The Outpost",
@@ -108,6 +114,7 @@ export const movies = {
         genre:["Action Movie","Crime Movie"],
         language: "English",
         addedTime: '1604735928',
+        rating:'4',
     },
     TheTown: {
         name: "The Town",
@@ -116,6 +123,7 @@ export const movies = {
         genre:["Crime Movie",'Romantic Movie'],
         language: "English",
         addedTime: '1604745928',
+        rating:'4',
     },
     TheMaster: {
         name: "The Master",
@@ -124,6 +132,7 @@ export const movies = {
         genre:["Comedy Movie","Crime Movie",'Romantic Movie'],
         language: "English",
         addedTime: '1604755928',
+        rating:'3',
     },
     GunganSaxena: {
         name: "Gungan Saxena",
@@ -132,14 +141,16 @@ export const movies = {
         genre:["Comedy Movie","Crime Movie",'Romantic Movie'],
         language: "Hindi",
         addedTime: '1604755928',
+        rating:'5',
     },
     Dangal: {
         name: "Dangal",
         image: dangal,
         description: "Mahavir Singh Phogat, a former wrestler, decides to fulfil his dream of winning a gold medal for his country by training his daughters for the Commonwealth Games despite the existing social stigmas.",
-        genre:["Action Movie","Comedy Movie",'Romantic Movie'],
+        genre:["Action Movie","Comedy Movie"],
         language: "Hindi",
         addedTime: '1604165928',
+        rating:'4',
     },
     KabirSingh: {
         name: "Kabir Singh",
@@ -148,6 +159,7 @@ export const movies = {
         genre:["Romance Movie","Comedy Movie",'Romantic Movie'],
         language: "Hindi",
         addedTime: '1604365928',
+        rating:'3',
     },
     RaatAkelli: {
         name: "Raat Akelli",
@@ -156,30 +168,34 @@ export const movies = {
         genre:["Crime Movie","Comedy Movie",'Romantic Movie'],
         language: "Hindi",
         addedTime: '1604465928',
+        rating:'4',
     },
     Saaho: {
         name: "Saaho",
         image: saaho,
         description: "An undercover agent and his partner go after a thief who has stolen 2,000 crore rupees. Soon, they realise that the case is linked to the death of a crime lord and an emerging gang war.",
-        genre:["Action Movie","Comedy Movie",'Romantic Movie'],
+        genre:["Action Movie"],
         language: "Hindi",
         addedTime: '1604565928',
+        rating:'4',
     },
     LustStories: {
         name: "Lust Stories",
         image: lust,
         description: "An anthology of four stories that sheds light on modern relationships from the viewpoint of the Indian woman.",
-        genre:["Romantic Movie","Crime Movie","Comedy Movie"],
+        genre:["Romantic Movie","Comedy Movie"],
         language: "Hindi",
         addedTime: '1604065928',
+        rating:'3',
     },
     Daredevil: {
         name: "Daredevil",
         image: Daredevil,
         description: "Marvel's Daredevil, or simply Daredevil, is an American streaming television series created for Netflix by Drew Goddard, based on the Marvel Comics character of the same name.",
-        genre: ["Action Movie","Comedy Movie",'Romantic Movie'],
+        genre: ["Comedy Movie",'Romantic Movie'],
         language: "English",
         addedTime: '1600765928',
+        rating:'3',
     },
     VelaiyillaPattathar: {
         name: "Velaiyilla Pattathar",
@@ -188,6 +204,7 @@ export const movies = {
         genre: ['Romantic Movie',"Comedy Movie"],
         language: 'Tamil',
         addedTime: '1604765921',
+        rating:'5',
     },
     Strangerthings: {
         name: 'Stranger Things',
@@ -196,6 +213,7 @@ export const movies = {
         genre: ["Action Movie","Crime Movie","Comedy Movie",'Romantic Movie'],
         language: 'English',
         addedTime: '1604760922',
+        rating:'5',
     },
     Moneyheist: {
         name: 'Money Heist',
@@ -204,6 +222,7 @@ export const movies = {
         genre: ["Crime Movie",'Romantic Movie'],
         language: "English",
         addedTime: '1604765926',
+        rating:'4',
     },
     ReasonsWhy: {
         name: "13 Reasons Why",
@@ -212,44 +231,7 @@ export const movies = {
         genre: ['Romantic Movie'],
         language: "English",
         addedTime: '1604765913',
+        rating:'3',
     }
 }
-
-export const requests = {
-    fetchMovieBuzzOriginals: {
-        id:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
-        names: ['BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS','Roma','UncutGem','RaatAkelli', 'Saaho', 'LustStories','TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster'],
-        images: [blacklist, ginnywedssunny, paranormal, spartacus,roma,uncutgem,raatakeli,saaho,lust,irishman,marriagestory,spiderman,roma,theoutpost,thetown,themaster],
-        languages: ['English', 'English', 'English', 'English', 'English', 'English', 'English', 'Hindi', 'Hindi', 'English', 'English', 'English', 'English', 'English', 'English', 'English',],
-       
-    },
-    fetchTrending: {
-        id:[1,2,3,4,5,6,7,8,9,10,11,12],
-        names: ['UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster','BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
-        images: [uncutgem,irishman,marriagestory,spiderman,roma,theoutpost,thetown,themaster,blacklist, ginnywedssunny, paranormal, spartacus],
-        languages:['English','English','English','English','English','English','English','English','English','English','English','English'],
-    },
-    fetchIndianMovies: {
-        id:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
-        names: ['Gungan Saxena', 'Dangal', 'Kabir Singh', 'RaatAkelli', 'Saaho', 'LustStories','GINNYWEDSSUNNY', 'PARANORMAL','UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster','BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
-        images: [gunjan,dangal,kabir,raatakeli,saaho,lust, ginnywedssunny, paranormal,uncutgem,irishman,marriagestory,spiderman,roma,theoutpost,thetown,themaster,blacklist, ginnywedssunny, paranormal, spartacus],
-        languages:['English','English','English','English','English','English','English','English','English','English','English','English','English','English','English','English','English','English','English','English'],
-    },
-    fetchTopRated: {
-        names: ['LustStories','MarriageStory','GINNYWEDSSUNNY','UncutGems','SPARTACUS','Roma','RaatAkelli', 'Saaho','BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS','Roma','UncutGem','RaatAkelli', 'Saaho', 'LustStories','TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster'],
-        images: [lust,marriagestory,ginnywedssunny,uncutgem,spartacus,roma,raatakeli,saaho,blacklist, ginnywedssunny, paranormal, spartacus,roma,uncutgem,raatakeli,saaho,lust,irishman,marriagestory,spiderman,roma,theoutpost,thetown,themaster]
-    },
-    fetchActionMovies: {
-        names: ['Dangal','Saaho','Spiderman', 'TheIrishman','UncutGems','BLACKLIST','PARANORMAL', 'SPARTACUS','Roma','UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster','BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
-        images: [dangal,saaho,spiderman,irishman,uncutgem,blacklist,paranormal,spartacus,roma,uncutgem,irishman,marriagestory,spiderman,roma,theoutpost,thetown,themaster,blacklist, ginnywedssunny, paranormal, spartacus]
-    },
-    fetchComedyMovies: {
-        names: ['BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS','Roma','UncutGem','RaatAkelli', 'Saaho', 'LustStories','TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster'],
-        images: [blacklist, ginnywedssunny, paranormal, spartacus,roma,uncutgem,raatakeli,saaho,lust,irishman,marriagestory,spiderman,roma,theoutpost,thetown,themaster],
-        },
-    fetchHorrorMovies: {
-        names: ['UncutGems', 'TheIrishman', 'MarriageStory', 'Spiderman', 'Roma', 'TheOutpost', 'TheTown', 'TheMaster','BLACKLIST', 'GINNYWEDSSUNNY', 'PARANORMAL', 'SPARTACUS'],
-        images: [uncutgem,irishman,marriagestory,spiderman,roma,theoutpost,thetown,themaster,blacklist, ginnywedssunny, paranormal, spartacus]
-    }
-  };
 

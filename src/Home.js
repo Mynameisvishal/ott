@@ -13,61 +13,17 @@ export class Home extends Component{
       filteron: false,
       selectedGenre: [],
 
-    }
-  }
-  checkGenre = (value) => {
-    this.setState({ filterGenre: value })
-    console.log(this.state.filterGenre);
-    const filter = this.state.filterGenre;
-    var selectedGenre = [];
-    var x1;
-    if (filter.actionMovies) {
-      x1 = "Action Movies"
-      selectedGenre.push(x1);
-
-    }
-    if (filter.comedyMovies) {
-      x1 = "Comedy Movies"
-      selectedGenre.push(x1);
-    }
-    if (filter.romanticMovies) {
-      x1 = "Romantic Movies"
-      selectedGenre.push(x1);
-    }
-    if (filter.crimeMovies) {
-      x1 = "Crime Movies"
-      selectedGenre.push(x1);
-    }
-    console.log('inside selected genre');
-    console.log(selectedGenre);
-    this.setState({ selectedGenre: selectedGenre })
+    };
   }
  
   componentWillMount() {
-    
-    this.setState({filteron: JSON.parse(localStorage.getItem('filterItem'))})
+    this.setState({ filteron: JSON.parse(localStorage.getItem('filterItem')) })
     const logedin = JSON.parse(localStorage.getItem('logedin'));
-    if(logedin === false){
+    if (logedin === false) {
       this.props.history.push('/login');
-    }
-    
+    }  
   }
-  Selectedgenrelist = (selectedGenre) => {
-    // const movies = JSON.parse(localStorage.getItem('Movies'));
 
-    console.log(selectedGenre);
-    for (const [key, value] of Object.entries(movies)) { 
-      // selectedGenre.map()
-    }
-  }
-  // var selectedGenre = ["Action Movie", "Crime Movie"];
-  // var isGenreSelected = false
-  // selectedGenre.map((g2,key) => (
-  //   g2=== genre ? isGenreSelected = true : ""
-  // ))
-  // if (!isGenreSelected) {
-  //   return
-  // }
   genrelist = (genre) => {
     var currentGenreMovies = [];
     var storedMovies = localStorage.getItem('Movies')
@@ -85,52 +41,42 @@ export class Home extends Component{
         
       ))
     }
-    console.log(currentGenreMovies)
     const sort = localStorage.getItem('sort')
-    if ( sort == "recent") {
-        console.log('');
-        currentGenreMovies.sort((movie1, movie2) => {
-            console.log(movie1.addedTime);
-          console.log(movie2.addedTime);
-          return parseInt(movie1.addedTime) - parseInt(movie2.addedTime)
-        });
+    if (sort == "recent") {
+      currentGenreMovies.sort((movie1, movie2) => {
+        return parseInt(movie1.addedTime) - parseInt(movie2.addedTime)
+      });
     }
-     return currentGenreMovies
+    if (sort == "rating") {
+      currentGenreMovies.sort((movie1, movie2) => {
+        return parseInt(movie1.rating) - parseInt(movie2.rating)
+      });
+    }
+    return currentGenreMovies
    
   }
 
   render() {
-    const { filterGenre,filteron,selectedGenre } = this.state;
     return (
        
 
       <div className="app">
 
-        <Nav checkGenre={this.checkGenre.bind(this)}/>
+        <Nav />
         <Banner />
         
         {this.state.filteron ?
           
-            <FilterList />
-           :
+          <FilterList />
+          :
           <div>
-            <Row title={"Action Movie"} fetchURL={this.genrelist("Action Movie")} Largeone/>
+            <Row title={"Action Movie"} fetchURL={this.genrelist("Action Movie")} Largeone />
             <Row title={"Romantic Movie"} fetchURL={this.genrelist("Romantic Movie")} />
             <Row title={"Comedy Movie"} fetchURL={this.genrelist("Comedy Movie")} />
-            <Row title={"Crime Movie"} fetchURL={this.genrelist("Crime Movie")} /> 
+            <Row title={"Crime Movie"} fetchURL={this.genrelist("Crime Movie")} />
           </div>
             
         }
-       
-        {/* <Row title={"Romantic Movie"} fetchURL={this.genrelist("Romantic Movie")} />
-        <Row title={"Comedy Movie"} fetchURL={this.genrelist("Comedy Movie")} />
-        <Row title={"Crime Movie"} fetchURL={this.genrelist("Crime Movie")} />  */}
-        
-        
-          
-         
-       
-
       </div>
     );
   }

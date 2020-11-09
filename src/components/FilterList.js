@@ -4,11 +4,7 @@ import Row from './Row'
 export class FilterList extends Component {
     state = {
         sorting:'',
-        
     };
-    // componentWillMount() {
-    //     this.setState({ sorting:JSON.parse(localStorage.getItem('sort'))})
-    // }
     genrelist = (genre) => {
         const movies = JSON.parse(localStorage.getItem('Movies'));
         const sort = (localStorage.getItem('sort'));
@@ -17,23 +13,20 @@ export class FilterList extends Component {
           
           value.genre.map((g1, key) => (
             (g1 === genre) ?
-              
               currentGenreMovies.push(value)
               : ""
-            
           ))
         }
-        console.log(currentGenreMovies)
-
-        // // if ( sort== "recent") {
-        // //     console.log('');
+        if ( sort== "recent") {
             currentGenreMovies.sort((movie1, movie2) => {
-                console.log(movie1.addedTime);
-                console.log(movie2.addedTime);
               return movie1.addedTime - movie2.addedTime;
             });
-        // // }
-        console.log(currentGenreMovies)
+        }
+        if (sort == "rating") {
+            currentGenreMovies.sort((movie1, movie2) => {
+              return parseInt(movie1.rating) - parseInt(movie2.rating)
+            });
+          }
          return currentGenreMovies
        
       }

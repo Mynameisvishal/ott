@@ -8,27 +8,6 @@ import Register from './authenticate/Register';
 
 class App extends Component { 
   render() {
-    // var selectedLanguage = [english, hindi]
-    // var selectedGenre = [ animation]
-    // const genres = ["action, ""animation", "Thriller",]
-    // for (genres in genres) {
-    //   var currentGenreMovies = []
-    //   if !selectedGenre.contains(genre) {
-    //     continue;
-    //   }
-    //   for (movie in movies) {
-    //     if (moive.genre == genres && selectedLanguage.indexOf(movie.language) != nil ) {
-    //       currentGenreMovies.add(movie)
-    //     }
-    //   }
-    //   //UI CHANGES
-    //   create a label with genreName
-    //   creata a horizontal list currentGenreMovies
-
-    
-  
-    const logedin = false;
-    
     return (
       <React.Fragment>
         <Router>
